@@ -32,8 +32,11 @@
 
 ![15](https://github.com/frostmarry/dumbweek1/blob/master/asset/15.png)
 ![15](https://github.com/frostmarry/dumbweek1/blob/master/asset/16.png)
+![15](https://github.com/frostmarry/dumbweek1/blob/master/asset/16.1.png)
 
 7. klik done terus sampai tahap menentukan nama dan user server dan install openssh
 
 ![17](https://github.com/frostmarry/dumbweek1/blob/master/asset/17.png)
 ![17](https://github.com/frostmarry/dumbweek1/blob/master/asset/18.png)
+
+8. tunggu sampai instalasi selesai, kemudian restart vm
