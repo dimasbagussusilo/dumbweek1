@@ -2,19 +2,19 @@
 
 - Memilih OS yang akan digunakan untuk server, dalam hal ini Ubuntu server 18.04
 
-![text](1)
+![text](https://github.com/frostmarry/dumbweek1/blob/master/AWS%20-%20Create%20%26%20Setup%20Server/asset/1.png)
 
 - Memilih spesifikasi server, tidak perlu terlalu besar karena hanya akan digunakan untuk mendeploy aplikasi sederhana
 
-![text](2)
+![text](https://github.com/frostmarry/dumbweek1/blob/master/AWS%20-%20Create%20%26%20Setup%20Server/asset/2.png)
 
 - Konfigurasi koneksi yang akan digunakan oleh server, pastikan memilih opsi **Disable** pada `Auto-assign Public IP` agar ip menjadi static dan tidak akan berubah - ubah setelah server di restart
 
-![text](3)
+![text](https://github.com/frostmarry/dumbweek1/blob/master/AWS%20-%20Create%20%26%20Setup%20Server/asset/3.png)
 
 - Memilih storage yang akan digunakan, disini yang saya ganti hanya bagian `Size` dari default 8GB menjadi 15GB.
 
-![text](4)
+![text](https://github.com/frostmarry/dumbweek1/blob/master/AWS%20-%20Create%20%26%20Setup%20Server/asset/4.png)
 
 - Configurasi security group agar user hanya bisa mengakses beberapa port yang sudah di sediakan, dalam hal ini yang dibutuhkan adalah: 
 
@@ -22,20 +22,20 @@
 	- HTTP  : agar website bisa diakses public
 	- HTTPS : agar website bisa dipasang SSL 
 
-![text](5)
+![text](https://github.com/frostmarry/dumbweek1/blob/master/AWS%20-%20Create%20%26%20Setup%20Server/asset/5.png)
 
 - Buat key pair baru yang nantinya digunakan untuk login ke server menggunakan SSH
 
-![text](6)
+![text](https://github.com/frostmarry/dumbweek1/blob/master/AWS%20-%20Create%20%26%20Setup%20Server/asset/6.png)
 
 - Setelah proses instalasi server selesai, server sebelumnya tidak memiliki public ip, jadi harus ditambahkan Elastic IP terlebih dahulu agar server bisa diakses dari komputer lokal
 
-![text](7)
+![text](https://github.com/frostmarry/dumbweek1/blob/master/AWS%20-%20Create%20%26%20Setup%20Server/asset/7.png)
 
 - Tambahkan Elastic Ip yang sudah didapat ke server public
-![text](8)
-![text](9)
-![text](10)
+![text](https://github.com/frostmarry/dumbweek1/blob/master/AWS%20-%20Create%20%26%20Setup%20Server/asset/8.png)
+![text](https://github.com/frostmarry/dumbweek1/blob/master/AWS%20-%20Create%20%26%20Setup%20Server/asset/9.png)
+![text](https://github.com/frostmarry/dumbweek1/blob/master/AWS%20-%20Create%20%26%20Setup%20Server/asset/10.png)
 
 ---
 
@@ -43,7 +43,7 @@
 
 Untuk konfigurasi server Private cara konfigurasinya kurang lebih sama, hanya pada `Configure Security Group` cukup menggunakan All trafic, kemudian Source diganti Ip Private milik Server Public. Server ini juga tidak memerlukan Elastic IP.
 
-![text](15)
+![text](https://github.com/frostmarry/dumbweek1/blob/master/AWS%20-%20Create%20%26%20Setup%20Server/asset/15.png)
 
 Pada gambar diatas sementara saya masukan Ip dari komputer yang saya gunakan untuk menambahkan user baru agar tidak perlu menggunakan key-pair saat login dari server public.
 
@@ -54,16 +54,16 @@ Cara berikut saya lakukan pada kedua server untuk menghilangkan key-pair saat lo
 
 - Login dari terminal lokal menggunakan perintah `ssh -1 key-pair ubuntu@ip-public` 
 
-![text](11)
+![text](https://github.com/frostmarry/dumbweek1/blob/master/AWS%20-%20Create%20%26%20Setup%20Server/asset/11.png)
 
 - Tambahkan user baru dengan perintah `adduser nama-user` kemudian beri akses sudo menggunakan `usermod -aG sudo nama-user`
 
-![text](12)
+![text](https://github.com/frostmarry/dumbweek1/blob/master/AWS%20-%20Create%20%26%20Setup%20Server/asset/12.png)
 
 - Edit file yang ada dalam `/etc/ssh/sshd_config` dan ganti `PasswordAuthentication` dari No ke Yes 
 
-![text](13)
+![text](https://github.com/frostmarry/dumbweek1/blob/master/AWS%20-%20Create%20%26%20Setup%20Server/asset/13.png)
 
 - Test login menggunakan user baru
 
-![text](14)
+![text](https://github.com/frostmarry/dumbweek1/blob/master/AWS%20-%20Create%20%26%20Setup%20Server/asset/14.png)
