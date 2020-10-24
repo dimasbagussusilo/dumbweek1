@@ -2,7 +2,7 @@
 
 - Tambahkan DNS dari cloudflare dengan memasukkan nama sub-domain dan elastic ip dari Server Public
 
-![text](1.png)
+![text](asset/1.png)
 
 - Edit file dumplay.conf pada directory `etc/nginx/sites-available` dan ganti server_name menjadi elga.instructype.com
 
