@@ -11,16 +11,16 @@
 	apt-get install -y nodejs
 	```
 
-![text](https://github.com/frostmarry/dumbweek1/blob/master/AWS%20-%20Server%20for%20Application/asset/1.png)
+![text](asset/1.png)
 
 - Setelah proses instalasi selesai, saya jalankan perintah `git clone https://github.com/sgnd/dumbplay.git` 
 
-![text](https://github.com/frostmarry/dumbweek1/blob/master/AWS%20-%20Server%20for%20Application/asset/2.png)
+![text](asset/2.png)
 
 - CD ke `dumplay/frontend` dan buat file baru bernama ecosystem.config.js dan isi dengan pengaturan PM2
 
-![text](https://github.com/frostmarry/dumbweek1/blob/master/AWS%20-%20Server%20for%20Application/asset/3.png)
+![text](asset/3.png)
 
 - install PM2 dengan perintah `npm install -g pm2` dan jalankan perintah `pm2 start ecosystem.config.js` setelah instalasi selesai 
 
-![text](https://github.com/frostmarry/dumbweek1/blob/master/AWS%20-%20Server%20for%20Application/asset/4.png)
+![text](asset/4.png)
