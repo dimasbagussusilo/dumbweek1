@@ -1,13 +1,19 @@
-# Custom Domain
+# MENAMBAHKAN SSL LET'S ENCRYPT
 
-- Tambahkan DNS dari cloudflare dengan memasukkan nama sub-domain dan elastic ip dari Server Public
+- Menginstal aplikasi certbot dengan beberapa perintah berikut pada server public
 
-![text](https://github.com/frostmarry/dumbweek1/tree/master/AWS%20-%20Custom%20Domain/asset/1.png)
+```
+sudo add-apt repository ppa:certbot/certbot
+sudo apt-get update
+sudo apt-get install python-certbot-nginx
+```
 
-- Edit file dumplay.conf pada directory `etc/nginx/sites-available` dan ganti server_name menjadi elga.instructype.com
+- Setelah itu menjalankan perintah `sudo certbot --nginx -d elga.instructype.com` untuk mengaktifkan let's encrypt dengan bantuan certbot
 
-![text](https://github.com/frostmarry/dumbweek1/tree/master/AWS%20-%20Custom%20Domain/asset/2.png)
+![text](https://github.com/frostmarry/dumbweek1/tree/master/AWS%20-%20SSL%20Configuration/asset/1.png)
 
-- Tes akses website menggunakan server_name yang baru
+![text](https://github.com/frostmarry/dumbweek1/tree/master/AWS%20-%20SSL%20Configuration/asset/2.png)
 
-![text](https://github.com/frostmarry/dumbweek1/tree/master/AWS%20-%20Custom%20Domain/asset/3.png)
+- Check settingan nginx yang ada pada file dumplay.conf dalam directory `etc/nginx/sites-available`
+
+![text](https://github.com/frostmarry/dumbweek1/tree/master/AWS%20-%20SSL%20Configuration/asset/3.png)
