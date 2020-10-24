@@ -18,4 +18,4 @@ sudo apt-get install python-certbot-nginx
 
 ![text](https://github.com/frostmarry/dumbweek1/tree/master/AWS%20-%20SSL%20Configuration/asset/3.png)
 
-![text](https://github.com/frostmarry/dumbweek1/tree/master/AWS%20-%20SSL%20Configuration/asset/lol.png)
+![text](https://github.com/frostmarry/dumbweek1/tree/master/AWS%20-%20Custom%20Domain/asset/3.png)
